@@ -1,9 +1,17 @@
-<!DOCTYPE html>
+#!/bin/bash
+
+# Script para converter templates Jinja2 para HTML puro
+
+# Array com os arquivos a serem convertidos
+files=("politica-cookies.html" "informacoes-lgpd.html" "meta-compliance.html")
+
+# Template do header HTML
+header='<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moto Ponta Brasil</title>
+    <title>%TITLE% - Moto Ponta Brasil</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,25 +23,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- CSS Customizado - CAMINHO RELATIVO PARA CLOUDFLARE PAGES -->
+    <!-- CSS Customizado -->
     <link href="static/css/styles.css" rel="stylesheet">
     
-    <!-- Meta Tags para SEO e Compatibilidade -->
-    <meta name="description" content="Páginas legais da Moto Ponta Brasil - Termos de uso, política de privacidade e informações legais em conformidade com LGPD e políticas do Meta/WhatsApp Business.">
-    <meta name="keywords" content="moto ponta, termos de uso, política de privacidade, LGPD, WhatsApp Business, entrega, delivery">
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="%DESCRIPTION%">
+    <meta name="keywords" content="%KEYWORDS%">
     <meta name="author" content="Moto Ponta Brasil">
     <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Moto Ponta Brasil">
-    <meta property="og:description" content="Páginas legais da Moto Ponta Brasil">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Moto Ponta Brasil">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Moto Ponta Brasil">
-    <meta name="twitter:description" content="Páginas legais da Moto Ponta Brasil">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -48,12 +45,10 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <h1 class="mb-1">
-                        {% block page_title %}
-                        <i class="fas fa-shield-alt me-3"></i>{% block breadcrumb %}Moto Ponta Brasil{% endblock %}
-                        {% endblock %}
+                        <i class="fas fa-shield-alt me-3"></i>Central Legal e Conformidade
                     </h1>
                     <p class="mb-0 header-subtitle">
-                        {% block page_subtitle %}Páginas Legais e Políticas de Privacidade{% endblock %}
+                        Transparência, proteção de dados e conformidade legal
                     </p>
                 </div>
             </div>
@@ -61,7 +56,6 @@
     </header>
 
     <!-- Breadcrumb Navigation -->
-    {% block breadcrumb_nav %}
     <nav class="breadcrumb-custom" aria-label="breadcrumb">
         <div class="container">
             <ol class="breadcrumb">
@@ -70,17 +64,17 @@
                         <i class="fas fa-home"></i> Início
                     </a>
                 </li>
-                {% block breadcrumb_items %}{% endblock %}
+                <li class="breadcrumb-item active" aria-current="page">%BREADCRUMB%</li>
             </ol>
         </div>
     </nav>
-    {% endblock %}
 
     <!-- Main Content -->
     <main id="main-content" class="legal-content">
-        <div class="container">
-            {% block content %}{% endblock %}
-        </div>
+        <div class="container">'
+
+# Template do footer HTML
+footer='        </div>
     </main>
 
     <!-- Footer -->
@@ -137,48 +131,46 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- JavaScript Customizado - CAMINHO RELATIVO PARA CLOUDFLARE PAGES -->
+    <!-- JavaScript Customizado -->
     <script src="static/js/main.js"></script>
-    
-    <!-- Cookie Consent Banner -->
-    <div id="cookieConsent" class="position-fixed bottom-0 start-0 end-0 bg-dark text-white p-3" style="z-index: 1000; display: none;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <p class="mb-0">
-                        <i class="fas fa-cookie-bite me-2"></i>
-                        Este site utiliza cookies para melhorar sua experiência de navegação. 
-                        <a href="politica-cookies.html" class="text-info">Saiba mais sobre nossa política de cookies</a>
-                    </p>
-                </div>
-                <div class="col-md-4 text-md-end">
-                    <button id="acceptCookies" class="btn btn-outline-light btn-sm me-2">
-                        <i class="fas fa-check"></i> Aceitar
-                    </button>
-                    <button id="declineCookies" class="btn btn-outline-secondary btn-sm">
-                        <i class="fas fa-times"></i> Recusar
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Toast Container para Notificações -->
-    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
-        <!-- Toasts serão inseridos aqui via JavaScript -->
-    </div>
-
-    {% block extra_scripts %}{% endblock %}
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Moto Ponta Brasil",
-        "description": "Delivery inteligente com tecnologia de ponta",
-        "url": "https://motoponta.com.br"
-    }
-    </script>
 </body>
-</html>
+</html>'
+
+# Função para converter arquivo
+convert_file() {
+    local file=$1
+    local title=$2
+    local description=$3
+    local keywords=$4
+    local breadcrumb=$5
+    
+    echo "Convertendo $file..."
+    
+    # Criar backup
+    cp "$file" "${file}.bak"
+    
+    # Extrair conteúdo entre {% block content %} e {% endblock %}
+    content=$(sed -n '/{% block content %}/,/{% endblock %}/p' "$file" | sed '1d;$d')
+    
+    # Personalizar header
+    local custom_header=$(echo "$header" | sed -e "s/%TITLE%/$title/g" -e "s/%DESCRIPTION%/$description/g" -e "s/%KEYWORDS%/$keywords/g" -e "s/%BREADCRUMB%/$breadcrumb/g")
+    
+    # Criar novo arquivo
+    echo "$custom_header" > "$file"
+    echo "$content" >> "$file"
+    echo "$footer" >> "$file"
+    
+    # Substituir variáveis template
+    sed -i 's/{{ data_atualizacao }}/Janeiro de 2025/g' "$file"
+    
+    echo "Conversão de $file concluída!"
+}
+
+# Converter cada arquivo
+convert_file "politica-cookies.html" "Política de Cookies" "Política de Cookies da Moto Ponta Brasil - Como utilizamos cookies para melhorar sua experiência." "política de cookies, cookies, moto ponta, privacidade" "Política de Cookies"
+
+convert_file "informacoes-lgpd.html" "Informações LGPD" "Informações LGPD da Moto Ponta Brasil - Seus direitos como titular de dados pessoais." "LGPD, proteção de dados, direitos, titular de dados" "Informações LGPD"
+
+convert_file "meta-compliance.html" "Conformidade Meta" "Conformidade Meta da Moto Ponta Brasil - Compliance com políticas do WhatsApp Business." "meta compliance, whatsapp business, políticas meta" "Conformidade Meta"
+
+echo "Todas as conversões concluídas!"
