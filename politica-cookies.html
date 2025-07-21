@@ -1,0 +1,390 @@
+{% extends "base-template.html" %}
+
+{% block title %}Política de Cookies - Moto Ponta Brasil{% endblock %}
+
+{% block breadcrumb_items %}
+<li class="breadcrumb-item active" aria-current="page">Política de Cookies</li>
+{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h1><i class="fas fa-cookie-bite icon-section"></i> Política de Cookies</h1>
+    <p class="lead text-muted">Como utilizamos cookies para melhorar sua experiência</p>
+</div>
+
+<div class="highlight-box">
+    <div class="row">
+        <div class="col-md-6">
+            <p><strong><i class="fas fa-calendar-alt"></i> Última atualização:</strong> {{ data_atualizacao }}</p>
+        </div>
+        <div class="col-md-6">
+            <p><strong><i class="fas fa-globe"></i> Aplicação:</strong> Website www.motoponta.com.br</p>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-question-circle icon-section"></i>1. O que são Cookies</h2>
+<p>Cookies são pequenos arquivos de texto armazenados no seu dispositivo quando você visita nosso website. Eles nos ajudam a melhorar sua experiência e fornecer serviços personalizados de acordo com suas preferências.</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-file-alt fa-2x text-primary mb-2"></i>
+            <h6>Arquivos Pequenos</h6>
+            <small>Textos armazenados localmente</small>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-user-cog fa-2x text-success mb-2"></i>
+            <h6>Personalização</h6>
+            <small>Melhora sua experiência</small>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-shield-alt fa-2x text-warning mb-2"></i>
+            <h6>Segurança</h6>
+            <small>Protege sua sessão</small>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-list icon-section"></i>2. Tipos de Cookies Utilizados</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="p-3 border rounded">
+            <h5><i class="fas fa-cog text-danger"></i> Essenciais</h5>
+            <p class="small text-muted">Sempre Ativos - Necessários para funcionamento</p>
+            <ul class="list-styled">
+                <li>Manter sessão ativa</li>
+                <li>Proteção CSRF</li>
+                <li>Preferências básicas</li>
+                <li>Funcionalidades do site</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 border rounded">
+            <h5><i class="fas fa-chart-line text-info"></i> Performance</h5>
+            <p class="small text-muted">Opcional - Análise de uso</p>
+            <ul class="list-styled">
+                <li>Google Analytics</li>
+                <li>Tempo de carregamento</li>
+                <li>Páginas mais visitadas</li>
+                <li>Comportamento do usuário</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 border rounded">
+            <h5><i class="fas fa-bullhorn text-warning"></i> Marketing</h5>
+            <p class="small text-muted">Opcional - Publicidade direcionada</p>
+            <ul class="list-styled">
+                <li>Facebook Pixel</li>
+                <li>Google Ads</li>
+                <li>Remarketing</li>
+                <li>Campanhas personalizadas</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-table icon-section"></i>3. Detalhes dos Cookies</h2>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Finalidade</th>
+                <th>Duração</th>
+                <th>Fornecedor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>session_id</td>
+                <td><span class="badge bg-danger">Essencial</span></td>
+                <td>Manter sessão do usuário</td>
+                <td>Sessão</td>
+                <td>Moto Ponta</td>
+            </tr>
+            <tr>
+                <td>csrf_token</td>
+                <td><span class="badge bg-danger">Essencial</span></td>
+                <td>Proteção contra ataques CSRF</td>
+                <td>Sessão</td>
+                <td>Moto Ponta</td>
+            </tr>
+            <tr>
+                <td>user_preferences</td>
+                <td><span class="badge bg-danger">Essencial</span></td>
+                <td>Salvar preferências do usuário</td>
+                <td>30 dias</td>
+                <td>Moto Ponta</td>
+            </tr>
+            <tr>
+                <td>_ga</td>
+                <td><span class="badge bg-info">Performance</span></td>
+                <td>Análise de tráfego do site</td>
+                <td>2 anos</td>
+                <td>Google Analytics</td>
+            </tr>
+            <tr>
+                <td>_gid</td>
+                <td><span class="badge bg-info">Performance</span></td>
+                <td>Identificação única de visitante</td>
+                <td>24 horas</td>
+                <td>Google Analytics</td>
+            </tr>
+            <tr>
+                <td>_fbp</td>
+                <td><span class="badge bg-warning">Marketing</span></td>
+                <td>Pixel do Facebook para anúncios</td>
+                <td>90 dias</td>
+                <td>Facebook</td>
+            </tr>
+            <tr>
+                <td>_gcl_au</td>
+                <td><span class="badge bg-warning">Marketing</span></td>
+                <td>Google Ads e conversões</td>
+                <td>90 dias</td>
+                <td>Google Ads</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 class="section-title"><i class="fas fa-cogs icon-section"></i>4. Gerenciamento de Cookies</h2>
+
+<div class="highlight-box">
+    <h5><i class="fas fa-sliders-h"></i> Controle Suas Preferências</h5>
+    <p>Você tem controle total sobre os cookies. Pode configurá-los através do banner que aparece na primeira visita ou através das configurações do seu navegador.</p>
+</div>
+
+<h4>4.1 Configuração por Navegador</h4>
+<div class="row">
+    <div class="col-md-6">
+        <h6><i class="fab fa-chrome"></i> Google Chrome</h6>
+        <ol>
+            <li>Clique nos três pontos → Configurações</li>
+            <li>Privacidade e segurança → Cookies</li>
+            <li>Escolha suas preferências</li>
+        </ol>
+
+        <h6><i class="fab fa-firefox"></i> Mozilla Firefox</h6>
+        <ol>
+            <li>Menu → Configurações</li>
+            <li>Privacidade e segurança</li>
+            <li>Cookies e dados de sites</li>
+        </ol>
+    </div>
+    <div class="col-md-6">
+        <h6><i class="fab fa-safari"></i> Safari</h6>
+        <ol>
+            <li>Safari → Preferências</li>
+            <li>Aba Privacidade</li>
+            <li>Gerenciar cookies</li>
+        </ol>
+
+        <h6><i class="fab fa-edge"></i> Microsoft Edge</h6>
+        <ol>
+            <li>Três pontos → Configurações</li>
+            <li>Cookies e permissões do site</li>
+            <li>Gerenciar e excluir cookies</li>
+        </ol>
+    </div>
+</div>
+
+<h4>4.2 Central de Preferências</h4>
+<div class="text-center p-4" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 12px;">
+    <h5><i class="fas fa-toggle-on"></i> Configure Seus Cookies</h5>
+    <p>Use nossa central de preferências para gerenciar cookies de forma granular:</p>
+    
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="essentialCookies" checked disabled>
+                <label class="form-check-label" for="essentialCookies">
+                    <strong>Essenciais</strong><br>
+                    <small>Necessários para funcionamento</small>
+                </label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="performanceCookies">
+                <label class="form-check-label" for="performanceCookies">
+                    <strong>Performance</strong><br>
+                    <small>Análise e melhorias</small>
+                </label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="marketingCookies">
+                <label class="form-check-label" for="marketingCookies">
+                    <strong>Marketing</strong><br>
+                    <small>Anúncios personalizados</small>
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <button class="btn btn-legal mt-3" onclick="saveCookiePreferences()">
+        <i class="fas fa-save"></i> Salvar Preferências
+    </button>
+</div>
+
+<h2 class="section-title"><i class="fas fa-info-circle icon-section"></i>5. Impacto da Desabilitação</h2>
+
+<div class="warning-box">
+    <h5><i class="fas fa-exclamation-triangle"></i> Importante Saber</h5>
+    <p>A desabilitação de alguns cookies pode afetar a funcionalidade do site:</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h6>🚫 Essenciais Desabilitados</h6>
+        <ul>
+            <li>❌ Impossível fazer login</li>
+            <li>❌ Perda de preferências</li>
+            <li>❌ Problemas de segurança</li>
+            <li>❌ Funcionalidades limitadas</li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h6>📊 Performance Desabilitados</h6>
+        <ul>
+            <li>⚠️ Não conseguimos melhorar o site</li>
+            <li>⚠️ Problemas não identificados</li>
+            <li>⚠️ Experiência menos otimizada</li>
+            <li>✅ Funcionalidades básicas mantidas</li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h6>📢 Marketing Desabilitados</h6>
+        <ul>
+            <li>ℹ️ Anúncios menos relevantes</li>
+            <li>ℹ️ Ofertas genéricas</li>
+            <li>ℹ️ Não afeta funcionalidades</li>
+            <li>✅ Maior privacidade</li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-globe icon-section"></i>6. Cookies de Terceiros</h2>
+
+<p>Alguns cookies são definidos por serviços de terceiros que utilizamos:</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="p-3 border rounded">
+            <h5><i class="fab fa-google"></i> Google Analytics</h5>
+            <p><strong>Finalidade:</strong> Análise de tráfego e comportamento</p>
+            <p><strong>Política:</strong> <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+            <p><strong>Opt-out:</strong> <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">tools.google.com/dlpage/gaoptout</a></p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="p-3 border rounded">
+            <h5><i class="fab fa-facebook"></i> Facebook Pixel</h5>
+            <p><strong>Finalidade:</strong> Anúncios direcionados e conversões</p>
+            <p><strong>Política:</strong> <a href="https://www.facebook.com/privacy/policy" target="_blank">facebook.com/privacy/policy</a></p>
+            <p><strong>Configurações:</strong> <a href="https://www.facebook.com/settings?tab=ads" target="_blank">facebook.com/settings?tab=ads</a></p>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-shield-alt icon-section"></i>7. Segurança dos Cookies</h2>
+
+<p>Implementamos medidas de segurança rigorosas para proteger os dados dos cookies:</p>
+
+<ul class="list-styled">
+    <li><strong>Secure Flag:</strong> Cookies transmitidos apenas via HTTPS</li>
+    <li><strong>HttpOnly:</strong> Cookies inacessíveis via JavaScript malicioso</li>
+    <li><strong>SameSite:</strong> Proteção contra ataques CSRF</li>
+    <li><strong>Criptografia:</strong> Dados sensíveis sempre criptografados</li>
+    <li><strong>Expiração:</strong> Tempo de vida limitado e adequado</li>
+</ul>
+
+<h2 class="section-title"><i class="fas fa-sync-alt icon-section"></i>8. Atualizações desta Política</h2>
+
+<p><strong>8.1 Revisões:</strong> Esta política de cookies é revisada periodicamente.</p>
+<p><strong>8.2 Notificação:</strong> Mudanças significativas serão notificadas através de banner no site.</p>
+<p><strong>8.3 Data:</strong> A data da última atualização está sempre visível no topo desta página.</p>
+
+<h2 class="section-title"><i class="fas fa-envelope icon-section"></i>9. Contato</h2>
+
+<div class="contact-info">
+    <h5><i class="fas fa-question-circle"></i> Dúvidas sobre Cookies</h5>
+    <div class="row">
+        <div class="col-md-6">
+            <p><strong>E-mail:</strong> cookies@motoponta.com.br</p>
+            <p><strong>DPO:</strong> dpo@motoponta.com.br</p>
+        </div>
+        <div class="col-md-6">
+            <p><strong>WhatsApp:</strong> +55 (42) 99161-9261</p>
+            <p><strong>Horário:</strong> 08h às 18h (seg-sex)</p>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5 p-4" style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-radius: 12px;">
+    <h4><i class="fas fa-cookie-bite icon-section"></i> Gestão Transparente</h4>
+    <p class="lead">
+        <strong>Respeitamos sua privacidade e oferecemos controle total sobre como seus dados são utilizados através de cookies.</strong>
+    </p>
+</div>
+
+<script>
+function saveCookiePreferences() {
+    const essential = document.getElementById('essentialCookies').checked;
+    const performance = document.getElementById('performanceCookies').checked;
+    const marketing = document.getElementById('marketingCookies').checked;
+    
+    // Salvar preferências
+    localStorage.setItem('cookiePreferences', JSON.stringify({
+        essential: essential,
+        performance: performance,
+        marketing: marketing,
+        timestamp: new Date().toISOString()
+    }));
+    
+    // Mostrar confirmação
+    alert('Preferências de cookies salvas com sucesso!');
+    
+    // Aplicar configurações (implementar conforme necessário)
+    applyCookieSettings(essential, performance, marketing);
+}
+
+function applyCookieSettings(essential, performance, marketing) {
+    // Implementar lógica para aplicar configurações de cookies
+    console.log('Cookie settings applied:', { essential, performance, marketing });
+    
+    // Desabilitar/habilitar scripts conforme preferências
+    if (!performance) {
+        // Desabilitar Google Analytics
+        window['ga-disable-GA_TRACKING_ID'] = true;
+    }
+    
+    if (!marketing) {
+        // Desabilitar pixels de marketing
+        // Implementar conforme necessário
+    }
+}
+
+// Carregar preferências salvas
+document.addEventListener('DOMContentLoaded', function() {
+    const saved = localStorage.getItem('cookiePreferences');
+    if (saved) {
+        const preferences = JSON.parse(saved);
+        document.getElementById('performanceCookies').checked = preferences.performance;
+        document.getElementById('marketingCookies').checked = preferences.marketing;
+    }
+});
+</script>
+{% endblock %}

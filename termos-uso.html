@@ -1,0 +1,278 @@
+{% extends "base-template.html" %}
+
+{% block title %}Termos de Uso - Moto Ponta Brasil{% endblock %}
+
+{% block breadcrumb_items %}
+<li class="breadcrumb-item active" aria-current="page">Termos de Uso</li>
+{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h1><i class="fas fa-file-contract icon-section"></i> Termos de Uso do Serviço</h1>
+    <p class="lead text-muted">Condições para utilização dos nossos serviços</p>
+</div>
+
+<div class="highlight-box">
+    <div class="row">
+        <div class="col-md-6">
+            <p><strong><i class="fas fa-calendar-alt"></i> Última atualização:</strong> {{ data_atualizacao }}</p>
+        </div>
+        <div class="col-md-6">
+            <p><strong><i class="fas fa-check-circle"></i> Vigência:</strong> A partir da aceitação pelo usuário</p>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-building icon-section"></i>1. Identificação da Empresa</h2>
+<div class="contact-info">
+    <div class="row">
+        <div class="col-md-6">
+            <p><strong>Razão Social:</strong> Moto Ponta Brasil Ltda</p>
+            <p><strong>CNPJ:</strong> 00.000.000/0001-00</p>
+            <p><strong>Endereço:</strong> Rua das Entregas, 123 - Centro<br>Curitiba - PR - CEP: 80000-000</p>
+        </div>
+        <div class="col-md-6">
+            <p><strong>E-mail:</strong> contato@motoponta.com.br</p>
+            <p><strong>WhatsApp:</strong> +55 (42) 99161-9261</p>
+            <p><strong>Site:</strong> www.motoponta.com.br</p>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-bullseye icon-section"></i>2. Definições e Objeto</h2>
+<p><strong>2.1 Serviço:</strong> A Moto Ponta Brasil oferece serviços de delivery inteligente através de plataforma digital integrada com WhatsApp Business API e sistema de inteligência artificial.</p>
+
+<p><strong>2.2 Usuário:</strong> Pessoa física ou jurídica que utiliza nossos serviços de delivery através do WhatsApp.</p>
+
+<p><strong>2.3 Plataforma:</strong> Sistema tecnológico que inclui:</p>
+<ul class="list-styled">
+    <li>Bot de atendimento via WhatsApp (Otto)</li>
+    <li>Sistema de gestão de pedidos</li>
+    <li>Integração com métodos de pagamento</li>
+    <li>Rastreamento de entregas via GPS</li>
+    <li>Sistema de avaliações e feedback</li>
+</ul>
+
+<h2 class="section-title"><i class="fab fa-whatsapp icon-section"></i>3. Uso do WhatsApp Business</h2>
+<p><strong>3.1 Conformidade com Meta:</strong> Nosso serviço é operado em conformidade com as políticas do WhatsApp Business e Meta:</p>
+<ul class="list-styled">
+    <li>Uso autorizado da WhatsApp Business API</li>
+    <li>Respeito aos limites de mensagens</li>
+    <li>Opt-in explícito dos usuários</li>
+    <li>Opção de opt-out disponível a qualquer momento</li>
+    <li>Conformidade com políticas de spam</li>
+</ul>
+
+<div class="warning-box">
+    <h5><i class="fas fa-exclamation-triangle"></i> Consentimento Importante</h5>
+    <p><strong>Ao enviar sua primeira mensagem para nosso WhatsApp, você:</strong></p>
+    <ul>
+        <li>Consente em receber mensagens comerciais relacionadas ao serviço</li>
+        <li>Autoriza o processamento de seus dados conforme nossa Política de Privacidade</li>
+        <li>Aceita estes Termos de Uso</li>
+        <li>Confirma ser maior de 18 anos ou ter autorização dos responsáveis</li>
+    </ul>
+</div>
+
+<h2 class="section-title"><i class="fas fa-robot icon-section"></i>4. Inteligência Artificial (Otto)</h2>
+<p><strong>4.1 Assistente Virtual:</strong> O Otto é nosso assistente de IA que:</p>
+<ul class="list-styled">
+    <li>Processa pedidos automaticamente 24/7</li>
+    <li>Fornece informações sobre produtos e serviços</li>
+    <li>Gerencia o atendimento inteligente</li>
+    <li>Escalona para atendimento humano quando necessário</li>
+    <li>Aprende com suas preferências para melhor atendimento</li>
+</ul>
+
+<p><strong>4.2 Limitações da IA:</strong></p>
+<ul>
+    <li>⚠️ O Otto pode não compreender 100% das solicitações</li>
+    <li>✅ Sempre oferecemos atendimento humano como alternativa</li>
+    <li>👥 Decisões finais são supervisionadas por humanos</li>
+    <li>🔄 Sistema em constante aprendizado e melhoria</li>
+</ul>
+
+<h2 class="section-title"><i class="fas fa-shopping-cart icon-section"></i>5. Pedidos e Entregas</h2>
+<h4>5.1 Processo de Pedidos:</h4>
+<ul class="list-styled">
+    <li>Pedidos são feitos exclusivamente via WhatsApp</li>
+    <li>Confirmação é enviada automaticamente</li>
+    <li>Cancelamentos devem ser solicitados em até 10 minutos</li>
+    <li>Modificações possíveis até o início da preparação</li>
+</ul>
+
+<h4>5.2 Entregas:</h4>
+<div class="row">
+    <div class="col-md-6">
+        <ul class="list-styled">
+            <li>Tempo estimado: 30-45 minutos</li>
+            <li>Rastreamento em tempo real via WhatsApp</li>
+            <li>Taxa de entrega conforme localização</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <ul class="list-styled">
+            <li>Horário: 18h às 23h (seg-dom)</li>
+            <li>Área de cobertura: região metropolitana</li>
+            <li>Entregador identificado com uniforme</li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-credit-card icon-section"></i>6. Pagamentos</h2>
+<h4>6.1 Métodos Aceitos:</h4>
+<div class="row">
+    <div class="col-md-4">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-qrcode fa-2x text-success mb-2"></i>
+            <h6>PIX</h6>
+            <small>Preferencial - Desconto 5%</small>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-credit-card fa-2x text-primary mb-2"></i>
+            <h6>Cartão</h6>
+            <small>Débito e Crédito</small>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-money-bill fa-2x text-warning mb-2"></i>
+            <h6>Dinheiro</h6>
+            <small>Na entrega</small>
+        </div>
+    </div>
+</div>
+
+<p class="mt-3"><strong>6.2 Processamento:</strong> Pagamentos eletrônicos são processados através de parceiros certificados e seguros.</p>
+
+<h2 class="section-title"><i class="fas fa-shield-alt icon-section"></i>7. Proteção de Dados (LGPD)</h2>
+<p><strong>7.1 Compromisso:</strong> Protegemos seus dados pessoais conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <h5>📊 Dados Coletados:</h5>
+        <ul class="list-styled">
+            <li>Número de telefone (WhatsApp)</li>
+            <li>Nome para entrega</li>
+            <li>Endereço de entrega</li>
+            <li>Histórico de pedidos</li>
+            <li>Preferências alimentares</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h5>🎯 Finalidades:</h5>
+        <ul class="list-styled">
+            <li>Processamento e entrega de pedidos</li>
+            <li>Atendimento ao cliente</li>
+            <li>Melhorias no serviço</li>
+            <li>Comunicações comerciais (com opt-in)</li>
+            <li>Análises estatísticas anonimizadas</li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-ban icon-section"></i>8. Uso Indevido e Limitações</h2>
+<h4>8.1 Práticas Proibidas:</h4>
+<div class="row">
+    <div class="col-md-6">
+        <ul>
+            <li>❌ Spam ou mensagens excessivas</li>
+            <li>❌ Uso de linguagem ofensiva</li>
+            <li>❌ Tentativas de fraude</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <ul>
+            <li>❌ Compartilhamento de conteúdo ilegal</li>
+            <li>❌ Uso para fins não comerciais</li>
+            <li>❌ Tentativas de hackear o sistema</li>
+        </ul>
+    </div>
+</div>
+
+<p><strong>8.2 Consequências:</strong> O uso indevido pode resultar no bloqueio temporário ou definitivo do serviço.</p>
+
+<h2 class="section-title"><i class="fas fa-headset icon-section"></i>9. Atendimento e Suporte</h2>
+<div class="contact-info">
+    <div class="row">
+        <div class="col-md-6">
+            <h5><i class="fas fa-life-ring"></i> Central de Atendimento</h5>
+            <p><strong>WhatsApp:</strong> +55 (42) 99161-9261</p>
+            <p><strong>E-mail:</strong> suporte@motoponta.com.br</p>
+        </div>
+        <div class="col-md-6">
+            <h5><i class="fas fa-clock"></i> Horários</h5>
+            <p><strong>IA (Otto):</strong> 24h por dia</p>
+            <p><strong>Humano:</strong> 08h às 22h</p>
+            <p><strong>Tempo de resposta:</strong> Até 2 horas</p>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-balance-scale icon-section"></i>10. Responsabilidades e Limitações</h2>
+<div class="row">
+    <div class="col-md-6">
+        <h5>✅ Nossa Responsabilidade:</h5>
+        <ul class="list-styled">
+            <li>Entrega dentro do prazo estimado</li>
+            <li>Qualidade dos produtos</li>
+            <li>Proteção de dados pessoais</li>
+            <li>Atendimento adequado</li>
+            <li>Conformidade legal</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h5>⚠️ Limitações:</h5>
+        <ul>
+            <li>Falhas na rede WhatsApp/Meta</li>
+            <li>Condições climáticas extremas</li>
+            <li>Disponibilidade sujeita a estoque</li>
+            <li>Problemas de trânsito/acesso</li>
+            <li>Força maior</li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-sync-alt icon-section"></i>11. Alterações nos Termos</h2>
+<p><strong>11.1 Atualizações:</strong> Estes termos podem ser alterados a qualquer momento para adequação legal ou melhoria do serviço.</p>
+<p><strong>11.2 Notificação:</strong> Usuários serão notificados via WhatsApp sobre mudanças significativas com 7 dias de antecedência.</p>
+<p><strong>11.3 Aceitação:</strong> O uso continuado após alterações constitui aceitação dos novos termos.</p>
+
+<h2 class="section-title"><i class="fas fa-gavel icon-section"></i>12. Lei Aplicável e Foro</h2>
+<p><strong>12.1 Legislação:</strong> Estes termos são regidos pela legislação brasileira, especialmente:</p>
+<ul class="list-styled">
+    <li>Lei Geral de Proteção de Dados (LGPD)</li>
+    <li>Código de Defesa do Consumidor</li>
+    <li>Marco Civil da Internet</li>
+    <li>Código Civil Brasileiro</li>
+</ul>
+
+<p><strong>12.2 Foro:</strong> Foro da Comarca de Curitiba, Estado do Paraná, para dirimir questões relacionadas a estes termos.</p>
+
+<div class="highlight-box">
+    <h5><i class="fas fa-envelope icon-section"></i> Contato para Questões Legais</h5>
+    <div class="row">
+        <div class="col-md-4">
+            <p><strong>DPO:</strong><br>dpo@motoponta.com.br</p>
+        </div>
+        <div class="col-md-4">
+            <p><strong>Jurídico:</strong><br>juridico@motoponta.com.br</p>
+        </div>
+        <div class="col-md-4">
+            <p><strong>Compliance:</strong><br>compliance@motoponta.com.br</p>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5 p-4" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); border-radius: 12px;">
+    <h4><i class="fas fa-handshake icon-section"></i> Declaração de Aceitação</h4>
+    <p class="lead">
+        <strong>Ao usar nossos serviços, você declara ter lido, compreendido e aceito integralmente estes Termos de Uso.</strong>
+    </p>
+    <a href="#" class="btn btn-legal">
+        <i class="fas fa-check"></i> Concordo com os Termos
+    </a>
+</div>
+{% endblock %}

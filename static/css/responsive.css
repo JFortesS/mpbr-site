@@ -1,0 +1,399 @@
+/* RESPONSIVE.CSS - MEDIA QUERIES E RESPONSIVIDADE */
+
+/* ===== BREAKPOINTS ===== */
+/* xs: 0-575px (Mobile Portrait) */
+/* sm: 576-767px (Mobile Landscape) */
+/* md: 768-991px (Tablet) */
+/* lg: 992-1199px (Desktop) */
+/* xl: 1200px+ (Large Desktop) */
+
+/* ===== MOBILE PORTRAIT (0-575px) ===== */
+@media (max-width: 575.98px) {
+    .legal-header {
+        padding: 2rem 0;
+        text-align: center;
+    }
+    
+    .legal-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .legal-content {
+        margin-top: -40px;
+        padding: 2rem 1rem;
+        border-radius: var(--border-radius);
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .highlight-box,
+    .warning-box,
+    .contact-info {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .btn-legal {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        display: block;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .table-responsive {
+        font-size: 0.85rem;
+    }
+    
+    .table thead th,
+    .table tbody td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .footer-legal {
+        padding: 2rem 0;
+        text-align: center;
+    }
+    
+    .footer-legal .row > div {
+        margin-bottom: 2rem;
+    }
+}
+
+/* ===== MOBILE LANDSCAPE (576-767px) ===== */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .legal-header {
+        padding: 2.5rem 0;
+    }
+    
+    .legal-content {
+        margin-top: -60px;
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .highlight-box,
+    .warning-box,
+    .contact-info {
+        padding: 1.75rem 1.25rem;
+    }
+    
+    .btn-legal {
+        padding: 0.9rem 1.75rem;
+        display: inline-block;
+    }
+}
+
+/* ===== TABLET (768-991px) ===== */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .legal-header {
+        padding: 2.75rem 0;
+    }
+    
+    .legal-content {
+        margin-top: -70px;
+        padding: 2.75rem 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    /* Otimizações para tablet */
+    .row .col-md-6 {
+        margin-bottom: 1.5rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+    
+    /* Cards em grid de 2 colunas */
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* ===== DESKTOP (992-1199px) ===== */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .legal-content {
+        max-width: 950px;
+    }
+    
+    .section-title {
+        font-size: 2.25rem;
+    }
+    
+    /* Cards em grid de 3 colunas */
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* ===== LARGE DESKTOP (1200px+) ===== */
+@media (min-width: 1200px) {
+    .legal-content {
+        max-width: 1000px;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    /* Layout mais espaçoso */
+    .highlight-box,
+    .warning-box,
+    .contact-info {
+        padding: 2.5rem;
+        margin: 2.5rem 0;
+    }
+    
+    /* Cards em grid de 4 colunas se necessário */
+    .card-grid-lg {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* ===== RESPONSIVIDADE PARA NAVEGAÇÃO ===== */
+@media (max-width: 767.98px) {
+    .breadcrumb-custom {
+        padding: 0.75rem 0;
+    }
+    
+    .breadcrumb {
+        font-size: 0.85rem;
+    }
+    
+    .breadcrumb-item {
+        word-break: break-word;
+    }
+}
+
+/* ===== RESPONSIVIDADE PARA LISTAS ===== */
+@media (max-width: 575.98px) {
+    .list-styled li {
+        padding: 0.6rem 0;
+        padding-left: 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .list-styled li::before {
+        font-size: 1rem;
+        top: 0.6rem;
+    }
+}
+
+/* ===== RESPONSIVIDADE PARA BADGES ===== */
+@media (max-width: 575.98px) {
+    .badge {
+        font-size: 0.7em;
+        padding: 0.4em 0.6em;
+    }
+}
+
+/* ===== RESPONSIVIDADE PARA ANIMAÇÕES ===== */
+@media (max-width: 767.98px) {
+    /* Reduzir animações em dispositivos móveis */
+    .animate-float,
+    .animate-glow,
+    .hover-lift {
+        animation: none;
+        transform: none;
+    }
+    
+    .hover-lift:hover {
+        transform: none;
+    }
+    
+    /* Simplificar transições */
+    * {
+        transition-duration: 0.2s !important;
+    }
+}
+
+/* ===== RESPONSIVIDADE PARA IMAGENS ===== */
+@media (max-width: 575.98px) {
+    .icon-section {
+        font-size: 1.2em !important;
+    }
+    
+    .fa-2x {
+        font-size: 1.5em !important;
+    }
+    
+    .fa-3x {
+        font-size: 2em !important;
+    }
+}
+
+/* ===== LAYOUT ESPECÍFICO PARA IMPRESSÃO ===== */
+@media print {
+    @page {
+        margin: 1in;
+        size: A4;
+    }
+    
+    .legal-header,
+    .footer-legal,
+    .breadcrumb-custom,
+    #cookieConsent,
+    .toast-container,
+    .btn,
+    .social-links {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .legal-content {
+        margin-top: 0 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        background: transparent !important;
+    }
+    
+    .section-title {
+        color: black !important;
+        border-bottom: 2px solid black !important;
+        page-break-after: avoid;
+    }
+    
+    .highlight-box,
+    .warning-box,
+    .contact-info {
+        border: 2px solid #ccc !important;
+        background: #f9f9f9 !important;
+        page-break-inside: avoid;
+    }
+    
+    .table {
+        border-collapse: collapse;
+    }
+    
+    .table th,
+    .table td {
+        border: 1px solid #ccc !important;
+        padding: 8pt !important;
+    }
+    
+    .table thead th {
+        background: #e9e9e9 !important;
+        color: black !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        color: black !important;
+    }
+    
+    p, li {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    .page-break {
+        page-break-before: always;
+    }
+}
+
+/* ===== MODO PAISAGEM MÓVEL ===== */
+@media (orientation: landscape) and (max-height: 500px) {
+    .legal-header {
+        padding: 1.5rem 0;
+    }
+    
+    .legal-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .legal-content {
+        margin-top: -30px;
+        padding: 1.5rem;
+    }
+}
+
+/* ===== AJUSTES PARA TELAS DE ALTA DENSIDADE ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Ajustes para telas Retina */
+    .legal-header::before {
+        background-size: 50px 50px;
+    }
+    
+    .icon-section {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* ===== AJUSTES PARA MODO ESCURO ===== */
+@media (prefers-color-scheme: dark) {
+    @media (max-width: 767.98px) {
+        .legal-content {
+            background: var(--bg-primary);
+            color: #e0e0e0;
+        }
+        
+        .card {
+            background: var(--bg-primary);
+            color: #e0e0e0;
+        }
+        
+        .table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+}
+
+/* ===== OTIMIZAÇÕES PARA TOUCH ===== */
+@media (pointer: coarse) {
+    /* Dispositivos touch */
+    .btn-legal {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 1rem 2rem;
+    }
+    
+    .breadcrumb-item a {
+        padding: 0.5rem;
+        margin: -0.5rem;
+    }
+    
+    .footer-legal a {
+        padding: 0.25rem;
+        margin: -0.25rem;
+    }
+    
+    /* Aumentar áreas de toque */
+    .social-links a {
+        padding: 0.5rem;
+        margin: 0.25rem;
+        border-radius: 50%;
+        min-width: 44px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

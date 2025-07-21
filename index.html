@@ -1,0 +1,121 @@
+{% extends "base-template.html" %}
+
+{% block title %}Central Legal - Moto Ponta Brasil{% endblock %}
+
+{% block breadcrumb_items %}
+<li class="breadcrumb-item active" aria-current="page">Central Legal</li>
+{% endblock %}
+
+{% block content %}
+<div class="text-center mb-5">
+    <h1><i class="fas fa-balance-scale icon-section"></i> Central Legal e Conformidade</h1>
+    <p class="lead text-muted">Transparência, proteção de dados e conformidade legal</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-file-contract fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Termos de Uso</h5>
+                <p class="card-text">Condições para utilização dos nossos serviços de delivery inteligente via WhatsApp.</p>
+                <a href="termos-uso.html" class="btn btn-legal">
+                    <i class="fas fa-eye"></i> Visualizar Termos
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-user-shield fa-3x text-success mb-3"></i>
+                <h5 class="card-title">Política de Privacidade</h5>
+                <p class="card-text">Como coletamos, usamos e protegemos seus dados pessoais conforme a LGPD.</p>
+                <a href="politica-privacidade.html" class="btn btn-legal">
+                    <i class="fas fa-shield-alt"></i> Ver Política
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-cookie-bite fa-3x text-warning mb-3"></i>
+                <h5 class="card-title">Política de Cookies</h5>
+                <p class="card-text">Como utilizamos cookies para melhorar sua experiência em nosso website.</p>
+                <a href="politica-cookies.html" class="btn btn-legal">
+                    <i class="fas fa-cog"></i> Gerenciar Cookies
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-gavel fa-3x text-info mb-3"></i>
+                <h5 class="card-title">Informações LGPD</h5>
+                <p class="card-text">Seus direitos como titular de dados e como exercê-los conforme a legislação.</p>
+                <a href="informacoes-lgpd.html" class="btn btn-legal">
+                    <i class="fas fa-info-circle"></i> Saiba Mais
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-12 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <i class="fab fa-meta fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Conformidade Meta/WhatsApp</h5>
+                <p class="card-text">Nosso compromisso com as políticas do WhatsApp Business e Meta para uso da API oficial.</p>
+                <a href="meta-compliance.html" class="btn btn-legal">
+                    <i class="fas fa-check-circle"></i> Ver Conformidade
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="highlight-box mt-5">
+    <h4><i class="fas fa-info-circle icon-section"></i> Informações Importantes</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <h6><i class="fas fa-calendar-alt"></i> Última Atualização</h6>
+            <p>{{ data_atualizacao }}</p>
+        </div>
+        <div class="col-md-4">
+            <h6><i class="fas fa-shield-alt"></i> Conformidade</h6>
+            <p>LGPD, Meta Policies, ANPD</p>
+        </div>
+        <div class="col-md-4">
+            <h6><i class="fas fa-headset"></i> Suporte Legal</h6>
+            <p>dpo@motoponta.com.br</p>
+        </div>
+    </div>
+</div>
+
+<div class="contact-info mt-5">
+    <h4><i class="fas fa-envelope icon-section"></i> Contatos Legais Especializados</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <h6>🛡️ Proteção de Dados</h6>
+            <ul class="list-unstyled">
+                <li><strong>DPO (Encarregado):</strong> dpo@motoponta.com.br</li>
+                <li><strong>Privacidade:</strong> privacidade@motoponta.com.br</li>
+                <li><strong>Direitos do Titular:</strong> direitos@motoponta.com.br</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h6>⚖️ Aspectos Legais</h6>
+            <ul class="list-unstyled">
+                <li><strong>Jurídico:</strong> juridico@motoponta.com.br</li>
+                <li><strong>Compliance:</strong> compliance@motoponta.com.br</li>
+                <li><strong>Meta Relations:</strong> meta@motoponta.com.br</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

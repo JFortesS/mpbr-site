@@ -1,0 +1,459 @@
+{% extends "base-template.html" %}
+
+{% block title %}Política de Privacidade - Moto Ponta Brasil{% endblock %}
+
+{% block breadcrumb_items %}
+<li class="breadcrumb-item active" aria-current="page">Política de Privacidade</li>
+{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h1><i class="fas fa-user-shield icon-section"></i> Política de Privacidade e Proteção de Dados</h1>
+    <p class="lead text-muted">Seu compromisso com a proteção de dados pessoais</p>
+</div>
+
+<div class="highlight-box">
+    <div class="row">
+        <div class="col-md-4">
+            <p><strong><i class="fas fa-calendar-alt"></i> Última atualização:</strong> {{ data_atualizacao }}</p>
+        </div>
+        <div class="col-md-4">
+            <p><strong><i class="fas fa-gavel"></i> Base legal:</strong> LGPD (Lei nº 13.709/2018)</p>
+        </div>
+        <div class="col-md-4">
+            <p><strong><i class="fas fa-check-circle"></i> Conformidade:</strong> Meta/WhatsApp Business</p>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-building icon-section"></i>1. Controlador dos Dados</h2>
+<div class="contact-info">
+    <div class="row">
+        <div class="col-md-6">
+            <h5><i class="fas fa-info-circle"></i> Informações da Empresa</h5>
+            <p><strong>Controlador:</strong> Moto Ponta Brasil Ltda</p>
+            <p><strong>CNPJ:</strong> 00.000.000/0001-00</p>
+            <p><strong>Endereço:</strong> Rua das Entregas, 123 - Centro<br>Curitiba - PR - CEP: 80000-000</p>
+        </div>
+        <div class="col-md-6">
+            <h5><i class="fas fa-envelope"></i> Contatos Privacidade</h5>
+            <p><strong>DPO (Encarregado):</strong> dpo@motoponta.com.br</p>
+            <p><strong>Privacidade:</strong> privacidade@motoponta.com.br</p>
+            <p><strong>WhatsApp:</strong> +55 (42) 99161-9261</p>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-database icon-section"></i>2. Dados Pessoais Coletados</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4>2.1 Dados de Identificação</h4>
+        <ul class="list-styled">
+            <li>Número de telefone (WhatsApp)</li>
+            <li>Nome completo</li>
+            <li>Apelido/Nome de usuário</li>
+            <li>Foto do perfil (quando disponível)</li>
+        </ul>
+
+        <h4>2.2 Dados de Localização</h4>
+        <ul class="list-styled">
+            <li>Endereço de entrega</li>
+            <li>Coordenadas GPS (quando compartilhadas)</li>
+            <li>Pontos de referência</li>
+            <li>Histórico de localizações</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h4>2.3 Dados de Consumo</h4>
+        <ul class="list-styled">
+            <li>Histórico de pedidos</li>
+            <li>Preferências alimentares</li>
+            <li>Método de pagamento preferido</li>
+            <li>Avaliações e comentários</li>
+            <li>Padrões de consumo</li>
+        </ul>
+
+        <h4>2.4 Dados de Conversação</h4>
+        <ul class="list-styled">
+            <li>Mensagens trocadas com IA</li>
+            <li>Comandos e preferências</li>
+            <li>Horários de contato</li>
+            <li>Interações com sistema</li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-bullseye icon-section"></i>3. Finalidades do Tratamento</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="p-3 border rounded text-center">
+            <i class="fas fa-file-contract fa-2x text-primary mb-2"></i>
+            <h5>Execução do Contrato</h5>
+            <small>Art. 7º, V da LGPD</small>
+            <ul class="list-unstyled mt-2">
+                <li>✅ Processamento de pedidos</li>
+                <li>✅ Coordenação de entregas</li>
+                <li>✅ Cobrança e pagamento</li>
+                <li>✅ Atendimento ao cliente</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 border rounded text-center">
+            <i class="fas fa-balance-scale fa-2x text-success mb-2"></i>
+            <h5>Legítimo Interesse</h5>
+            <small>Art. 7º, IX da LGPD</small>
+            <ul class="list-unstyled mt-2">
+                <li>✅ Melhoria dos serviços</li>
+                <li>✅ Análise de padrões</li>
+                <li>✅ Prevenção a fraudes</li>
+                <li>✅ Segurança da plataforma</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="p-3 border rounded text-center">
+            <i class="fas fa-thumbs-up fa-2x text-warning mb-2"></i>
+            <h5>Consentimento</h5>
+            <small>Art. 7º, I da LGPD</small>
+            <ul class="list-unstyled mt-2">
+                <li>📧 Marketing e promoções</li>
+                <li>📊 Análises estatísticas</li>
+                <li>🎁 Programa de fidelidade</li>
+                <li>📱 Notificações promocionais</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-robot icon-section"></i>4. Tratamento por Inteligência Artificial</h2>
+
+<div class="highlight-box">
+    <h5><i class="fas fa-brain"></i> Otto - Nosso Assistente de IA</h5>
+    <p><strong>Transparência Algorítmica conforme Art. 20 da LGPD</strong></p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4>4.1 Como a IA Processa seus Dados</h4>
+        <ul class="list-styled">
+            <li>Análise de texto em linguagem natural</li>
+            <li>Sugestões baseadas em histórico</li>
+            <li>Identificação de padrões de consumo</li>
+            <li>Otimização de respostas</li>
+            <li>Personalização do atendimento</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h4>4.2 Seus Direitos sobre IA</h4>
+        <ul class="list-styled">
+            <li>Revisão humana sempre disponível</li>
+            <li>Explicação sobre decisões automáticas</li>
+            <li>Direito de contestar decisões da IA</li>
+            <li>Opção de atendimento apenas humano</li>
+            <li>Transparência sobre algoritmos</li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-share-alt icon-section"></i>5. Compartilhamento de Dados</h2>
+
+<h4>5.1 Parceiros Autorizados</h4>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Parceiro</th>
+                <th>Finalidade</th>
+                <th>Localização</th>
+                <th>Proteção</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><i class="fab fa-meta"></i> Meta/WhatsApp</td>
+                <td>Operação do serviço de mensageria</td>
+                <td>EUA</td>
+                <td>Adequação ANPD</td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-credit-card"></i> PagSeguro</td>
+                <td>Processamento de pagamentos</td>
+                <td>Brasil</td>
+                <td>PCI DSS</td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-map"></i> Google Maps</td>
+                <td>Otimização de rotas</td>
+                <td>EUA</td>
+                <td>Adequação ANPD</td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-brain"></i> OpenAI</td>
+                <td>Processamento de IA</td>
+                <td>EUA</td>
+                <td>Dados anonimizados</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4>5.2 Garantias de Proteção</h4>
+<ul class="list-styled">
+    <li>Contratos de proteção (DPA - Data Processing Agreement)</li>
+    <li>Criptografia em trânsito e em repouso</li>
+    <li>Cláusulas contratuais padrão para transferências</li>
+    <li>Auditoria periódica de conformidade</li>
+</ul>
+
+<h2 class="section-title"><i class="fas fa-clock icon-section"></i>6. Retenção de Dados</h2>
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th>Tipo de Dado</th>
+                <th>Período de Retenção</th>
+                <th>Base Legal</th>
+                <th>Ação Pós-Prazo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dados de cadastro</td>
+                <td>Conta ativa + 5 anos</td>
+                <td>Código Civil</td>
+                <td>Exclusão automática</td>
+            </tr>
+            <tr>
+                <td>Histórico de pedidos</td>
+                <td>5 anos</td>
+                <td>CDC</td>
+                <td>Anonimização</td>
+            </tr>
+            <tr>
+                <td>Conversas WhatsApp</td>
+                <td>2 anos</td>
+                <td>Marco Civil</td>
+                <td>Exclusão automática</td>
+            </tr>
+            <tr>
+                <td>Dados de pagamento</td>
+                <td>5 anos</td>
+                <td>Legislação fiscal</td>
+                <td>Exclusão segura</td>
+            </tr>
+            <tr>
+                <td>Logs de acesso</td>
+                <td>6 meses</td>
+                <td>Marco Civil</td>
+                <td>Exclusão automática</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 class="section-title"><i class="fas fa-shield-alt icon-section"></i>7. Medidas de Segurança</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4><i class="fas fa-laptop-code"></i> Segurança Técnica</h4>
+        <ul class="list-styled">
+            <li>Criptografia TLS 1.3 em comunicações</li>
+            <li>Banco de dados criptografado (AES-256)</li>
+            <li>Autenticação multifator administrativa</li>
+            <li>Firewall e IDS para proteção</li>
+            <li>Backup automático criptografado</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h4><i class="fas fa-users-cog"></i> Segurança Organizacional</h4>
+        <ul class="list-styled">
+            <li>Treinamento LGPD para equipe</li>
+            <li>Política de segurança documentada</li>
+            <li>Monitoramento 24/7 de incidentes</li>
+            <li>Controle de acesso por perfil</li>
+            <li>Auditoria interna regular</li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-user-check icon-section"></i>8. Seus Direitos (LGPD)</h2>
+
+<div class="row">
+    <div class="col-md-8">
+        <h5>✅ Direitos Garantidos pela LGPD</h5>
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="list-styled">
+                    <li><strong>Confirmação:</strong> Se tratamos seus dados</li>
+                    <li><strong>Acesso:</strong> Cópia dos seus dados</li>
+                    <li><strong>Correção:</strong> Dados incompletos/inexatos</li>
+                    <li><strong>Anonimização:</strong> Quando possível</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-styled">
+                    <li><strong>Bloqueio:</strong> Dados desnecessários</li>
+                    <li><strong>Eliminação:</strong> Quando aplicável</li>
+                    <li><strong>Portabilidade:</strong> Para outro fornecedor</li>
+                    <li><strong>Informação:</strong> Sobre compartilhamento</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="contact-info">
+            <h5><i class="fas fa-headset"></i> Como Exercer</h5>
+            <p><strong>WhatsApp:</strong> Digite "MEUS DADOS"</p>
+            <p><strong>E-mail:</strong> direitos@motoponta.com.br</p>
+            <p><strong>DPO:</strong> dpo@motoponta.com.br</p>
+            <p><strong>Prazo:</strong> Até 15 dias</p>
+            <p><strong>Custo:</strong> Primeira solicitação gratuita</p>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-exclamation-triangle icon-section"></i>9. Incidentes de Segurança</h2>
+
+<h4>9.1 Protocolo de Notificação</h4>
+<div class="row">
+    <div class="col-md-3">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-clock fa-2x text-danger mb-2"></i>
+            <h6>ANPD</h6>
+            <small>Notificação em até 72h</small>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-users fa-2x text-warning mb-2"></i>
+            <h6>Usuários</h6>
+            <small>Comunicação imediata</small>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-eye fa-2x text-info mb-2"></i>
+            <h6>Transparência</h6>
+            <small>Informações detalhadas</small>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-tools fa-2x text-success mb-2"></i>
+            <h6>Medidas</h6>
+            <small>Ações corretivas</small>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-globe icon-section"></i>10. Transferência Internacional</h2>
+
+<p><strong>10.1 Parceiros Internacionais:</strong></p>
+<ul class="list-styled">
+    <li><strong>Meta (WhatsApp):</strong> EUA - Adequação por decisão da ANPD</li>
+    <li><strong>OpenAI:</strong> EUA - Cláusulas contratuais padrão + anonimização</li>
+    <li><strong>Google:</strong> EUA - Adequação por decisão da ANPD</li>
+</ul>
+
+<p><strong>10.2 Garantias:</strong> Todas as transferências seguem salvaguardas adequadas conforme LGPD, incluindo cláusulas contratuais padrão aprovadas pela ANPD.</p>
+
+<h2 class="section-title"><i class="fas fa-child icon-section"></i>11. Proteção de Menores</h2>
+
+<div class="warning-box">
+    <h5><i class="fas fa-shield-alt"></i> Política para Menores de Idade</h5>
+    <div class="row">
+        <div class="col-md-6">
+            <ul>
+                <li><strong>Proibido:</strong> Coleta de dados de menores de 13 anos</li>
+                <li><strong>13-18 anos:</strong> Apenas com consentimento dos pais/responsáveis</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <li><strong>Verificação:</strong> Processo de validação quando necessário</li>
+                <li><strong>Remoção:</strong> Dados removidos imediatamente se identificado menor não autorizado</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-headset icon-section"></i>12. Canal de Comunicação</h2>
+
+<div class="contact-info">
+    <h5><i class="fas fa-phone-alt"></i> Contatos para Privacidade e Dados</h5>
+    <div class="row">
+        <div class="col-md-6">
+            <p><strong>DPO (Encarregado):</strong> dpo@motoponta.com.br</p>
+            <p><strong>Privacidade:</strong> privacidade@motoponta.com.br</p>
+            <p><strong>Direitos do Titular:</strong> direitos@motoponta.com.br</p>
+        </div>
+        <div class="col-md-6">
+            <p><strong>WhatsApp:</strong> Digite "FALAR COM DPO"</p>
+            <p><strong>Telefone:</strong> +55 (42) 99161-9261</p>
+            <p><strong>Endereço:</strong> Rua das Entregas, 123 - Centro, Curitiba - PR</p>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-flag icon-section"></i>13. Reclamações à ANPD</h2>
+
+<p>Você pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD):</p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-globe fa-2x text-primary mb-2"></i>
+            <h6>Website</h6>
+            <small>www.gov.br/anpd</small>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-envelope fa-2x text-success mb-2"></i>
+            <h6>E-mail</h6>
+            <small>peticionamento.anpd@gov.br</small>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="text-center p-3 border rounded">
+            <i class="fas fa-comments fa-2x text-warning mb-2"></i>
+            <h6>Ouvidoria</h6>
+            <small>falabr.cgu.gov.br</small>
+        </div>
+    </div>
+</div>
+
+<h2 class="section-title"><i class="fas fa-sync-alt icon-section"></i>14. Atualizações desta Política</h2>
+
+<p><strong>14.1 Revisões:</strong> Esta política é revisada periodicamente para adequação legal e melhoria contínua.</p>
+<p><strong>14.2 Notificação:</strong> Mudanças significativas serão comunicadas via WhatsApp com 7 dias de antecedência.</p>
+<p><strong>14.3 Histórico:</strong> Versões anteriores disponíveis mediante solicitação ao DPO.</p>
+
+<div class="highlight-box">
+    <h5><i class="fas fa-award icon-section"></i> Conformidade e Certificações</h5>
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-styled">
+                <li>LGPD - Lei Geral de Proteção de Dados</li>
+                <li>Meta Compliance - WhatsApp Business Policies</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <ul class="list-styled">
+                <li>Marco Civil - Lei nº 12.965/2014</li>
+                <li>CDC - Código de Defesa do Consumidor</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5 p-4" style="background: linear-gradient(135deg, #e8f5e8, #c8e6c9); border-radius: 12px;">
+    <h4><i class="fas fa-heart icon-section"></i> Nosso Compromisso</h4>
+    <p class="lead">
+        <strong>Esta política demonstra nosso compromisso total com a proteção da sua privacidade e conformidade rigorosa com as leis brasileiras e internacionais.</strong>
+    </p>
+</div>
+{% endblock %}
