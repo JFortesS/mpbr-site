@@ -8,9 +8,9 @@ window.MotoPonta = {
     config: {
         animationDuration: 300,
         scrollOffset: 100,
-        redirectTime: 30,
+        redirectTime: 15,
         facebookUrl: 'https://facebook.com/motoponta',
-        debug: false
+        debug: true
     },
     modules: {},
     utils: {},
@@ -418,19 +418,109 @@ window.MotoPonta.init = function() {
 
 // ===== CARREGAMENTO DINÂMICO DE MÓDULOS =====
 window.MotoPonta.loadRedirectModule = function() {
-    // Este módulo será carregado apenas quando necessário
+    // Módulo de redirecionamento funcional
     if (typeof this.modules.redirect === 'undefined') {
-        // Aqui você pode carregar dinamicamente o módulo de redirecionamento
-        // Por enquanto, incluímos inline para simplicidade
         this.modules.redirect = {
+            timeLeft: 15,
+            timer: null,
+            banner: null,
+            
             init() {
-                window.MotoPonta.log.info('Módulo de redirecionamento carregado');
-                // Lógica do redirecionamento seria implementada aqui
+                // Verificar se está na página inicial
+                const pathname = window.location.pathname;
+                const isIndex = pathname === '/' || 
+                               pathname === '/index.html' || 
+                               pathname.endsWith('/');
+                
+                if (isIndex && !localStorage.getItem('redirectCancelled')) {
+                    this.createBanner();
+                    this.startCountdown();
+                    window.MotoPonta.log.info('Redirecionamento iniciado: 15 segundos para Facebook');
+                }
             },
-            cancelRedirect() {
-                window.MotoPonta.log.info('Redirecionamento cancelado');
+            
+            createBanner() {
+                // Remover banner existente
+                if (this.banner) {
+                    this.banner.remove();
+                }
+                
+                // Criar banner
+                this.banner = document.createElement('div');
+                this.banner.id = 'redirectBanner';
+                this.banner.className = 'alert alert-info position-fixed';
+                this.banner.style.cssText = `
+                    top: 20px;
+                    right: 20px;
+                    z-index: 9999;
+                    max-width: 350px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                `;
+                
+                this.banner.innerHTML = `
+                    <div class="d-flex align-items-center">
+                        <i class="fab fa-facebook-f me-2" style="color: #1877f2;"></i>
+                        <div class="flex-grow-1">
+                            <strong>Redirecionamento em <span id="countdown">15</span>s</strong><br>
+                            <small>Você será redirecionado para nossa página no Facebook</small>
+                        </div>
+                        <div class="ms-2">
+                            <button class="btn btn-sm btn-primary me-1" onclick="window.MotoPonta.modules.redirect.redirectNow()">
+                                Ir Agora
+                            </button>
+                            <button class="btn btn-sm btn-outline-secondary" onclick="window.MotoPonta.modules.redirect.cancel()">
+                                Cancelar
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(this.banner);
+            },
+            
+            startCountdown() {
+                this.timer = setInterval(() => {
+                    this.timeLeft--;
+                    const countdownEl = document.getElementById('countdown');
+                    if (countdownEl) {
+                        countdownEl.textContent = this.timeLeft;
+                    }
+                    
+                    if (this.timeLeft <= 0) {
+                        this.redirectNow();
+                    }
+                }, 1000);
+            },
+            
+            redirectNow() {
+                if (this.timer) {
+                    clearInterval(this.timer);
+                }
+                if (this.banner) {
+                    this.banner.remove();
+                }
+                window.location.href = 'https://facebook.com/motoponta';
+            },
+            
+            cancel() {
+                if (this.timer) {
+                    clearInterval(this.timer);
+                }
+                if (this.banner) {
+                    this.banner.remove();
+                }
+                localStorage.setItem('redirectCancelled', 'true');
+                window.MotoPonta.log.info('Redirecionamento cancelado pelo usuário');
+            },
+            
+            // Função para resetar o cancelamento (para testes)
+            reset() {
+                localStorage.removeItem('redirectCancelled');
+                window.MotoPonta.log.info('Status de redirecionamento resetado');
             }
         };
+        
         this.modules.redirect.init();
     }
 };

@@ -8,7 +8,7 @@ import { Utils } from './utils.js';
 export class RedirectManager {
     constructor(config = {}) {
         this.config = {
-            redirectTime: 30, // segundos
+            redirectTime: 15, // segundos
             facebookUrl: 'https://facebook.com/motoponta',
             enableAutoRedirect: true,
             showProgressBar: true,
